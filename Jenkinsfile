@@ -13,7 +13,7 @@ pipeline {
       steps {
 	      sh '''
           cd /
-          git clone https://github.com/yammyshep/jbuelow.com.git
+          git clone -b $BRANCH_NAME https://github.com/yammyshep/jbuelow.com.git
           cd jbuelow.com
 	      '''
 	    }
