@@ -13,15 +13,15 @@ pipeline {
       steps {
 	      sh '''
           cd /
-          git clone https://github.com/yammyshep/yshep.io.git
-          cd yshep.io
+          git clone https://github.com/yammyshep/jbuelow.com.git
+          cd jbuelow.com
 	      '''
 	    }
     }
     stage('Build') {
     	steps {
 	      sh '''
-	      	cd /yshep.io
+	      	cd /jbuelow.com
 	      	npm install
 	        npx parcel build src/index.html
 	      '''
@@ -30,7 +30,7 @@ pipeline {
     stage('Test') {
       steps {
         sh '''
-	        cd /yshep.io
+	        cd /jbuelow.com
 	        echo "not yet supported"
 	      '''
       }
@@ -39,9 +39,9 @@ pipeline {
       when { branch 'main' }
       steps {
         sh '''
-	        cd /yshep.io
-          ssh -o "StrictHostKeyChecking no" -i /ssh/deploy_id_ecdsa jenkins-deploy-www@10.0.16.4 "rm -r /var/www/yshep.io/*"
-          scp -o "StrictHostKeyChecking no" -i /ssh/deploy_id_ecdsa dist/* jenkins-deploy-www@10.0.16.4:/var/www/yshep.io/
+	        cd /jbuelow.com
+          ssh -o "StrictHostKeyChecking no" -i /ssh/deploy_id_ecdsa jenkins-deploy-www@10.0.16.4 "rm -r /var/www/jbuelow.com/*"
+          scp -o "StrictHostKeyChecking no" -i /ssh/deploy_id_ecdsa dist/* jenkins-deploy-www@10.0.16.4:/var/www/jbuelow.com/
         '''
       }
     }
