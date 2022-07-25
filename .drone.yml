@@ -15,9 +15,10 @@ steps:
     host: 10.1.0.40
     username: www-deploy
     password:
-      from_secret: deploy-user-password
+      from_secret: webserver-ssh-deploy-password
     target: /var/www/jbuelow.com/
     source: dist/*
+    overwrite: true
   when:
     branch:
     - main
