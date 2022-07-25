@@ -22,3 +22,6 @@ steps:
   when:
     branch:
     - main
+    event:
+    - push
+    - tag
