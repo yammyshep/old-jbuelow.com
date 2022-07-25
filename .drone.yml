@@ -1,0 +1,11 @@
+kind: pipeline
+type: docker
+name: default
+
+steps:
+- name: Build
+  image: node
+  commands:
+  - npm install
+  - npx parcel build src/index.html
+
