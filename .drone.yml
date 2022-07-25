@@ -1,0 +1,27 @@
+kind: pipeline
+type: docker
+name: default
+
+steps:
+- name: build
+  image: node
+  commands:
+  - npm install
+  - npx parcel build src/index.html
+
+- name: deploy
+  image: appleboy/drone-scp
+  settings:
+    host: 10.1.0.40
+    username: www-deploy
+    password:
+      from_secret: webserver-ssh-deploy-password
+    target: /var/www/jbuelow.com/
+    source: dist/*
+    overwrite: true
+  when:
+    branch:
+    - main
+    event:
+    - push
+    - tag
