@@ -16,7 +16,7 @@ steps:
     username: www-deploy
     password:
       from_secret: webserver-ssh-deploy-password
-    target: /var/www/yshep.io/
+    target: /var/www/jbuelow.com/
     source: dist/*
     strip_components: 1
     overwrite: true
