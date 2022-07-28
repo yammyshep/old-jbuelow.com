@@ -9,6 +9,22 @@ steps:
   - npm install
   - npx parcel build src/index.html
 
+- name: clean-server
+  image: appleboy/drone-ssh
+  settings:
+    host: 10.1.0.40
+    username: www-deploy
+    password:
+      from_secret: webserver-ssh-deploy-password
+    script:
+    - rm -rf /var/www/jbuelow.com/*
+  when:
+    branch:
+    - main
+    event:
+    - push
+    - tag
+
 - name: deploy
   image: appleboy/drone-scp
   settings:
