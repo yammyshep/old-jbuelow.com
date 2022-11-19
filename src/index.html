@@ -8,41 +8,40 @@
     </head>
     <body>
         <!-- <canvas id="bg-visuals" class="-z-10 absolute h-full w-full"></canvas> -->
-        <img class="-z-10 absolute h-full w-full blur blur-sm" src="img/background.jpg">
-        <div class="flex justify-center items-center h-screen gap-48">
-            <div id="identity" class="card w-96 shadow-xl backdrop-blur-xl">
-                <div class="card-body">
-                    <div class="avatar justify-center">
-                        <div class="w-64 mask mask-squircle">
+        <div class="lg:flex md:flex lg:justify-center items-center md:h-screen gap-48">
+            <div id="identity" class="card mx-8 md:w-96 md:h-fit shadow-xl backdrop-blur-xl">
+                <div class="card-body items-center">
+                    <div class="avatar items-center w-1/2 md:h-full md:w-64">
+                        <div class="mask mask-squircle">
                             <img src="img/avatar.jpg" alt="avatar">
                         </div>
-                    </div>
+                    </div>  
                     <h1 class="card-title justify-center text-primary text-3xl mt-5">Jacob Buelow</h1>
                     <div class="card-actions justify-center mt-2">
                         <div class="badge badge-accent">He/They</div>
-                        <div class="badge badge-primary">Sophomore</div>
+                        <div class="badge badge-primary">Junior</div>
                         <div class="badge badge-secondary">CS/GDD</div>
                     </div>
                     <p class="mt-5 mb-0 pb-0">
-                        Sophomore at University of Wisconsin - Stout studying Computer Science and Game Design.
+                        Junior at University of Wisconsin - Stout studying Computer Science and Game Design.
                     </p>
                 </div>
             </div>
-            <div id="socials" class="container w-96">
-                <div class="grid grid-cols-auto justify-items-center gap-8">
-                    <a role="button" class="btn gap-3" href="https://www.linkedin.com/in/jacob-buelow-b4b493220/">
+            <div id="socials" class="pt-8 md:pt-0 container px-8 w-screen md:w-96 overflow-auto">
+                <div class="grid grid-flow-col md:grid-flow-row md:grid-cols-auto justify-items-center gap-8">
+                    <a role="button" class="btn h-24 w-auto md:h-auto md:w-36 gap-3" href="https://www.linkedin.com/in/jacob-buelow-b4b493220/">
                         <img class="h-6" src="img/linkedin-mark.png" alt="LinkedIn Logo">
                         LinkedIn
                     </a>
-                    <a role="button" class="btn gap-3" href="mailto:jdbuelow@gmail.com">
+                    <a role="button" class="btn h-24 w-auto md:h-auto md:w-36 gap-3" href="mailto:jdbuelow@gmail.com">
                         <img class="h-6" src="img/email-icon.svg" alt="Email Icon">
                         E-Mail
                     </a>
-                    <a role="button" class="btn gap-3" href="download/resume-jacob-buelow-feb2022.pdf">
+                    <a role="button" class="btn h-24 w-auto md:h-auto md:w-36 gap-3" href="download/resume-jacob-buelow-feb2022.pdf">
                         <img class="h-6" src="img/document-icon.svg" alt="Document Icon">
                         Resume
                     </a>
-                    <a role="button" class="btn gap-3" href="https://github.com/yammyshep/">
+                    <a role="button" class="btn h-24 w-auto md:h-auto md:w-36 gap-3" href="https://github.com/yammyshep/">
                         <img class="h-6" src="img/github-mark.png" alt="GitHub Logo">
                         GitHub
                     </a>
@@ -50,9 +49,9 @@
             </div>
         </div>
         <div class="justify-center items-center grid grid-cols-1">
-            <div class="card lg:card-side shadow-xl backdrop-blur-3xl m-16">
-                <figure><img class="lg:w-96 sm:w-fit" src="img/projects/starlightpostal.png" alt="Project picture"></figure>
-                <div class="card-body">
+            <div class="card lg:card-side shadow-xl backdrop-blur-3xl m-16 h-96">
+                <figure class="w-full lg:w-1/3 h-24 object-cover"><img src="img/projects/starlightpostal.png" alt="Project picture"></figure>
+                <div class="card-body w-full lg:w-2/3">
                     <h2 class="card-title">Starlight Postal</h2>
                     <p>
                         Starlight Postal is a 2D hot air balloon piloting simulator, set in the mountaintops where the usual ground postal service cannot reach.
@@ -74,9 +73,28 @@
                     </div>
                 </div>
             </div>
-            <div class="card lg:card-side shadow-xl backdrop-blur-3xl m-16">
-                <figure><img class="lg:w-96 sm:w-fit" src="img/projects/rov.jpeg" alt="Project picture"></figure>
-                <div class="card-body">
+            <div class="card lg:card-side shadow-xl backdrop-blur-3xl m-16 h-96">
+                <figure class="w-full lg:w-1/3 object-cover"><img src="img/projects/moondeer.png" alt="Project picture"></figure>
+                <div class="card-body w-full lg:w-2/3">
+                    <h2 class="card-title">Artemis and the Sun</h2>
+                    <p>
+                        Artemis and the Sun is a game about the moon deer; Artemis, who needs to collect the 3 moon shards scattered around the map in order to regain their powers and ascend back to their rightful place in the sky.
+                    </p>
+                    <div class="card-actions justify-end">
+                        <a role="button" class="btn gap-3" href="https://youtu.be/2erRD6j7Zr8">
+                            <img class="h-6" src="img/youtube-mark.svg" alt="YouTube Logo">
+                            View Trailer on YoutTube
+                        </a>
+                        <a role="button" class="btn gap-3" href="https://incarnaation9.itch.io/artemis-and-the-sun">
+                            <img class="h-6" src="img/itchio-mark.svg" alt="Itch.io Logo">
+                            Download on itch.io
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="card lg:card-side shadow-xl backdrop-blur-3xl m-16 h-96">
+                <figure class="w-full lg:w-1/3 object-cover"><img src="img/projects/rov.jpeg" alt="Project picture"></figure>
+                <div class="card-body w-full lg:w-2/3">
                     <h2 class="card-title">Underwater Robotics</h2>
                     <p>
                         In high school, I participated in an Underwater Robotics team, where we built an underwater robot to compete in a regional competition.
@@ -90,9 +108,9 @@
                     </div>
                 </div>
             </div>
-            <div class="card lg:card-side shadow-xl backdrop-blur-3xl m-16">
-                <figure><img class="lg:w-96 sm:w-fit" src="img/projects/onlinecalendar.png" alt="Project picture"></figure>
-                <div class="card-body">
+            <div class="card lg:card-side shadow-xl backdrop-blur-3xl m-16 h-96">
+                <figure class="w-full lg:w-1/3 object-cover"><img src="img/projects/onlinecalendar.png" alt="Project picture"></figure>
+                <div class="card-body w-full lg:w-2/3">
                     <h2 class="card-title">Online Calendar</h2>
                     <p>
                         For my web development course at UW-Stout, I tasked myself with making a fully functional online calendar application using
